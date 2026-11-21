@@ -4,13 +4,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { QueryProvider } from "@/components/providers/query-provider";
-<<<<<<< HEAD
 import { ClerkProvider } from "@clerk/nextjs"
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
-=======
-
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
->>>>>>> 4c47ad958004dd96ebf76b10ca9e938c5c87e306
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,17 +29,13 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"  suppressHydrationWarning
+      lang="en"
       className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", inter.variable)}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-<<<<<<< HEAD
         <ClerkProvider>
           <QueryProvider>
-=======
-         <QueryProvider>
->>>>>>> 4c47ad958004dd96ebf76b10ca9e938c5c87e306
             <ThemeProvider
               attribute="class"
               defaultTheme="system"
@@ -54,12 +45,8 @@ export default function RootLayout({
               {children}
             </ThemeProvider>
           </QueryProvider>
-<<<<<<< HEAD
         </ClerkProvider>
       </body>
-=======
-        </body>
->>>>>>> 4c47ad958004dd96ebf76b10ca9e938c5c87e306
     </html>
   );
 }
